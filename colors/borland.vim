@@ -153,7 +153,8 @@ call s:linkGroup("TabLineFill", "TabLine")
 " TabLineSel    tab pages line, active tab page label
 call s:linkGroup("TabLineSel", "StatusLine")
 " Title         titles for output from ":set all", ":autocmd" etc; Affects the window counter per tab
-call s:linkGroup("Title", "NormalTransparent")
+call s:setGroup("Title", s:darkcyan, s:none, s:none)
+" call s:linkGroup("Title", "NormalTransparent")
 " Visual        Visual mode selection
 call s:setGroup("Visual", s:darkblue, s:darkwhite, s:none)
 " VisualNOS     Visual mode selection when vim is "Not Owning the Selection".  Only X11 Gui's |gui-x11| and |xterm-clipboard| supports this.
