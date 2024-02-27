@@ -100,7 +100,7 @@ call s:linkGroup("ExtraWhitespace", "ColorColumn")
 " EndOfBuffer   filler lines (~) after the last line in the buffer.  By default, this is highlighted like |hl-NonText|.
 call s:linkGroup("EndOfBuffer", "NonText")
 " ErrorMsg      error messages on the command line
-call s:setGroup("ErrorMsg", s:lightyellow, s:darkred, s:none)
+call s:setGroup("ErrorMsg", s:darkblack, s:darkmagenta, s:none)
 " VertSplit     the column separating vertically split windows
 call s:linkGroup("VertSplit", "ModeMsg")
 " Folded        line used for closed folds
@@ -125,9 +125,9 @@ call s:setGroup("NonText", s:darkcyan, s:none, s:none)
 " Normal        normal text; any text that matches no syntax pattern
 call s:setGroup("Normal", s:lightyellow, s:darkblue, s:none)
 " Pmenu         Popup menu: normal item.
-call s:setGroup("Pmenu", s:darkblack, s:darkcyan, s:none)
+call s:setGroup("Pmenu", s:darkblack, s:darkwhite, s:none)
 " PmenuSel      Popup menu: selected item.
-call s:setGroup("PmenuSel", s:lightwhite, s:darkgreen, s:none)
+call s:setGroup("PmenuSel", s:darkgreen, s:darkwhite, s:none)
 " PmenuSbar     Popup menu: scrollbar.
 call s:setGroup("PmenuSbar", s:darkscroll, s:lightscroll, s:none)
 " PmenuThumb    Popup menu: Thumb of the scrollbar.
