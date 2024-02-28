@@ -172,7 +172,8 @@ call s:setGroup("Comment", s:darkwhite, s:none, s:none)
 " Constant	       any constant
 call s:linkGroup("Constant", "NormalTransparent")
 " String           a string constant: "this is a string"
-call s:linkGroup("String", "Constant")
+" call s:linkGroup("String", "Constant")
+call s:setGroup("String", s:darkCyan, s:none, s:none)
 " Character        a character constant: 'c', '\n'
 call s:linkGroup("Character", "Constant")
 " Number           a number constant: 234, 0xff
