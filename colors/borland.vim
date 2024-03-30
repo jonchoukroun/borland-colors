@@ -247,3 +247,10 @@ call s:linkGroup("Error", "NormalTransparent")
 
 " Todo            anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 call s:setGroup("Todo", s:lightred, s:none, s:none)
+
+" Notify          notification UI for noice & nvim-notify
+call s:linkGroup("NotifyERRORBody", "NormalTransparent")
+call s:linkGroup("NotifyWARNBody", "NormalTransparent")
+call s:linkGroup("NotifyINFOBody", "NormalTransparent")
+call s:linkGroup("NotifyDEBUGBody", "NormalTransparent")
+call s:linkGroup("NotifyTRACEBody", "NormalTransparent")
