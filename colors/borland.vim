@@ -249,8 +249,8 @@ call s:linkGroup("Error", "NormalTransparent")
 call s:setGroup("Todo", s:lightred, s:none, s:none)
 
 " Notify          notification UI for noice & nvim-notify
-call s:linkGroup("NotifyERRORBody", "NormalTransparent")
-call s:linkGroup("NotifyWARNBody", "NormalTransparent")
-call s:linkGroup("NotifyINFOBody", "NormalTransparent")
-call s:linkGroup("NotifyDEBUGBody", "NormalTransparent")
-call s:linkGroup("NotifyTRACEBody", "NormalTransparent")
+call s:setGroup("NotifyERRORBody", s:darkblack, s:darkred, s:none)
+call s:setGroup("NotifyWARNBody", s:lightwhite, s:darkmagenta, s:none)
+call s:setGroup("NotifyINFOBody", s:lightwhite, s:darkcyan, s:none)
+call s:setGroup("NotifyDEBUGBody", s:darkyellow, s:none, s:none)
+call s:setGroup("NotifyTRACEBody", s:darkcyan, s:none, s:none)
