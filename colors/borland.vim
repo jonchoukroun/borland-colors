@@ -100,7 +100,7 @@ call s:linkGroup("ExtraWhitespace", "ColorColumn")
 " EndOfBuffer   filler lines (~) after the last line in the buffer.  By default, this is highlighted like |hl-NonText|.
 call s:linkGroup("EndOfBuffer", "NonText")
 " ErrorMsg      error messages on the command line
-call s:setGroup("ErrorMsg", s:darkblack, s:darkmagenta, s:none)
+" call s:setGroup("ErrorMsg", s:darkblack, s:darkmagenta, s:none)
 " VertSplit     the column separating vertically split windows
 call s:linkGroup("VertSplit", "ModeMsg")
 " Folded        line used for closed folds
