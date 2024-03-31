@@ -52,7 +52,7 @@ call s:setGroup("Normal", s:lightyellow, s:darkblue, s:none)
 " Like Normal, but with transparent background
 call s:setGroup("NormalTransparent", s:lightyellow, s:none, s:none)
 call s:setGroup("HighlightLine", s:darkblack, s:lightcyan, s:bold)
-call s:setGroup("HighlightBlock", s:darkblack, s:darkgreen, s:bold)
+call s:setGroup("HighlightBlock", s:lightwhite, s:darkgreen, s:bold)
 call s:setGroup("Callout", s:lightwhite, s:darkmagenta, s:bold)
 call s:setGroup("SubtleCallout", s:lightwhite, s:none, s:none)
 call s:setGroup("Scroll", s:none, s:darkscroll, s:none)
@@ -89,19 +89,27 @@ call s:linkGroup("CursorLineNr", "SubtleCallout")
 call s:linkGroup("CursorLineFold", "SubtleCallout")
 call s:linkGroup("CursorLineSign", "SubtleCallout")
 call s:setGroup("MatchParen", s:none, s:lightcyan, s:none)
-call s:setGroup("ModeMsg", s:lightred, s:darkblack, s:bold)
+call s:linkGroup("ModeMsg", HighlightBlock)
 call s:linkGroup("MsgSeparator", "Scroll")
 call s:linkGroup("MsgArea", "WindowBase")
 call s:linkGroup("MoreMsg", "Alert")
 call s:linkGroup("NormalFloat", "WindowBase")
-call s:setGroup("FloatBorder", s:lightwhite, s:darkscroll, s:none)
+call s:setGroup("FloatBorder", s:lightwhite, s:darkwhite, s:none)
 call s:setGroup("FloatTitle", s:darkblack, s:darkwhite, s:bold)
 call s:linkGroup("NormalNC", "Disabled")
 call s:linkGroup("Pmenu", "WindowBase")
 call s:linkGroup("PmenuSel", "HighlightLine")
-call s:setGroup("PmenuKind", s:lightred, s:darkgreen, s:none)
-call s:setGroup("PmenuKindSel", s:darkgreen, s:lightred, s:none)
-call s:setGroup("PmenuExtra", s:lightmagenta, s:darkblue, s:none)
-call s:setGroup("PmenuExtraSel", s:darkblue, s:lightmagenta, s:none)
+call s:linkGroup("PmenuKind", "WindowBase")
+call s:linkGroup("PmenuKindSel", "HighlightLine")
+call s:linkGroup("PmenuExtra", "WindowBase")
+call s:linkGroup("PmenuExtraSel", "HighlightLine")
 call s:linkGroup("PmenuSbar", "Scroll")
 call s:linkGroup("PmenuThumb", "ScrollReverse")
+" Question
+" QuickFixLine
+call s:linkGroup("Search", "HighlightLine")
+" SpecialKey
+" SpellBad
+" SpellCap
+" SpellLocal
+" SpellRare
