@@ -175,8 +175,8 @@ call s:linkGroup("Todo", "Callout")
 
 " nvim-cmp highlights
 call s:linkGroup("CmpItemAbbrDeprecated", "WindowBase")
-call s:linkGroup("CmpItemAbbrMatch", "WindowBase")
-call s:linkGroup("CmpItemAbbrMatchFuzzy", "WindowBase")
+call s:linkGroup("CmpItemAbbrMatch", "WindowBold")
+call s:linkGroup("CmpItemAbbrMatchFuzzy", "WindowBold")
 call s:linkGroup("CmpItemMenu", "WindowBase")
 
 call s:linkGroup("CmpItemKindField", "WindowBase")
