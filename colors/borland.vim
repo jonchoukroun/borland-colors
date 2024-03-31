@@ -35,6 +35,7 @@ let s:underline = "underline"
 let s:undercurl = "undercurl"
 let s:reverse = "reverse"
 let s:standout = "standout"
+let s:strikethrough = "strikethrough"
 
 function! s:setGroup(name, foreground, background, style)
   exe "hi! ".a:name." term=none cterm=none gui=none"
@@ -171,3 +172,42 @@ call s:setGroup("Underlined", s:lightyellow, s:none, s:bold)
 call s:linkGroup("Error", "Alert")
 
 call s:linkGroup("Todo", "Callout")
+
+" nvim-cmp highlights
+call s:linkGroup("CmpItemAbbrDeprecated", "WindowBase")
+call s:linkGroup("CmpItemAbbrMatch", "WindowBase")
+call s:linkGroup("CmpItemAbbrMatchFuzzy", "WindowBase")
+call s:linkGroup("CmpItemMenu", "WindowBase")
+
+call s:linkGroup("CmpItemKindField", "WindowBase")
+call s:linkGroup("CmpItemKindProperty", "WindowBase")
+call s:linkGroup("CmpItemKindEvent", "WindowBase")
+
+call s:linkGroup("CmpItemKindText", "WindowBase")
+call s:linkGroup("CmpItemKindEnum", "WindowBase")
+call s:linkGroup("CmpItemKindKeyword", "WindowBase")
+
+call s:linkGroup("CmpItemKindConstant", "WindowBase")
+call s:linkGroup("CmpItemKindConstructor", "WindowBase")
+call s:linkGroup("CmpItemKindReference", "WindowBase")
+
+call s:linkGroup("CmpItemKindFunction", "WindowBase")
+call s:linkGroup("CmpItemKindStruct", "WindowBase")
+call s:linkGroup("CmpItemKindClass", "WindowBase")
+call s:linkGroup("CmpItemKindModule", "WindowBase")
+call s:linkGroup("CmpItemKindOperator", "WindowBase")
+
+call s:linkGroup("CmpItemKindVariable", "WindowBase")
+call s:linkGroup("CmpItemKindFile", "WindowBase")
+
+call s:linkGroup("CmpItemKindUnit", "WindowBase")
+call s:linkGroup("CmpItemKindSnippet", "WindowBase")
+call s:linkGroup("CmpItemKindFolder", "WindowBase")
+
+call s:linkGroup("CmpItemKindMethod", "WindowBase")
+call s:linkGroup("CmpItemKindValue", "WindowBase")
+call s:linkGroup("CmpItemKindEnumMember", "WindowBase")
+
+call s:linkGroup("CmpItemKindInterface", "WindowBase")
+call s:linkGroup("CmpItemKindColor", "WindowBase")
+call s:linkGroup("CmpItemKindTypeParameter", "WindowBase")
