@@ -96,7 +96,7 @@ call s:linkGroup("MoreMsg", "Alert")
 call s:linkGroup("NormalFloat", "WindowBase")
 call s:setGroup("FloatBorder", s:lightwhite, s:darkwhite, s:none)
 call s:setGroup("FloatTitle", s:darkblack, s:darkwhite, s:bold)
-call s:linkGroup("NormalNC", "Disabled")
+call s:linkGroup("NormalNC", "WindowBase")
 call s:linkGroup("Pmenu", "WindowBase")
 call s:linkGroup("PmenuSel", "HighlightLine")
 call s:linkGroup("PmenuKind", "WindowBase")
@@ -113,3 +113,13 @@ call s:linkGroup("Search", "HighlightLine")
 " SpellCap
 " SpellLocal
 " SpellRare
+call s:linkGroup("TabLine", "WindowBase")
+call s:linkGroup("TabLineFill", "Scroll")
+call s:linkGroup("TabLineSel", "HighlightBlock")
+call s:setGroup("Title", s:darkmagenta, s:none, s:bold)
+call s:linkGroup("Visual", "HighlightLine")
+call s:linkGroup("VisualNOS", "HighlightLine")
+call s:linkGroup("WarningMsg", "Alert")
+call s:setGroup("Whitespace", s:none, s:none, s:none)
+" Wildmenu
+call s:linkGroup("WinBarNC", "WindowBase")
