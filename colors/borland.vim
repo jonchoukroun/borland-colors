@@ -49,6 +49,7 @@ endf
 
 " Normal text; any text that matches no syntax pattern
 call s:setGroup("Normal", s:lightyellow, s:darkblue, s:none)
+call s:setGroup("NormalReverse", s:darkblue, s:lightyellow, s:none)
 " Like Normal, but with transparent background
 call s:setGroup("NormalTransparent", s:lightyellow, s:none, s:none)
 call s:setGroup("HighlightLine", s:darkblack, s:lightcyan, s:bold)
@@ -65,7 +66,7 @@ call s:setGroup("WindowBase", s:darkblack, s:darkwhite, s:none)
 " Vim default highlight groups
 call s:linkGroup("ColorColumn", "Scroll")
 call s:linkGroup("Conceal", "Disabled")
-call s:setGroup("CurSearch", s:lightcyan, s:none, s:none)
+call s:linkGroup("CurSearch", "NormalReverse")
 call s:linkGroup("Cursor", "Callout")
 call s:linkGroup("lCursor", "Callout")
 call s:linkGroup("CursorIM", "Callout")
