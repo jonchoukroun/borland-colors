@@ -10,49 +10,24 @@ let g:colors_name = "borland"
 let s:vmode = "gui"
 let s:none = "NONE"
 
-if !exists("g:BorlandStyle")
-  let g:BorlandStyle = "modern"
-endif
-
-if g:BorlandStyle == "classic"
-  let s:darkblack = "#000000"
-  let s:darkblue = "#0000a8"
-  let s:darkgreen = "#00a800"
-  let s:darkcyan = "#00a8a8"
-  let s:darkred = "#a80000"
-  let s:darkmagenta = "#a800a8"
-  let s:darkyellow = "#a85700"
-  let s:darkwhite = "#a8a8a8"
-  let s:darkscroll = "#0038a8"
-  let s:lightblack = "#575757"
-  let s:lightblue = "#5757ff"
-  let s:lightgreen = "#57ff57"
-  let s:lightcyan = "#57ffff"
-  let s:lightred = "#ff5757"
-  let s:lightmagenta = "#ff57ff"
-  let s:lightyellow = "#ffff57"
-  let s:lightwhite = "#ffffff"
-  let s:lightscroll = "#0070a8"
-else
-  let s:darkblack = "#000000"
-  let s:darkblue = "#003078"
-  let s:darkgreen = "#308800"
-  let s:darkcyan = "#00a8a8"
-  let s:darkred = "#a80000"
-  let s:darkmagenta = "#a800a8"
-  let s:darkyellow = "#a85700"
-  let s:darkwhite = "#a8a8a8"
-  let s:darkscroll = "#004078"
-  let s:lightblack = "#575757"
-  let s:lightblue = "#5757ff"
-  let s:lightgreen = "#57ff57"
-  let s:lightcyan = "#57ffff"
-  let s:lightred = "#ff5757"
-  let s:lightmagenta = "#ff57ff"
-  let s:lightyellow = "#ffff57"
-  let s:lightwhite = "#ffffff"
-  let s:lightscroll = "#006078"
-endif
+let s:darkblack = "#000000"
+let s:darkblue = "#003078"
+let s:darkgreen = "#308800"
+let s:darkcyan = "#00a8a8"
+let s:darkred = "#a80000"
+let s:darkmagenta = "#a800a8"
+let s:darkyellow = "#a85700"
+let s:darkwhite = "#a8a8a8"
+let s:darkscroll = "#004078"
+let s:lightblack = "#575757"
+let s:lightblue = "#5757ff"
+let s:lightgreen = "#57ff57"
+let s:lightcyan = "#57ffff"
+let s:lightred = "#ff5757"
+let s:lightmagenta = "#ff57ff"
+let s:lightyellow = "#ffff57"
+let s:lightwhite = "#ffffff"
+let s:lightscroll = "#006078"
 
 let s:italic = "italic"
 let s:bold = "bold"
@@ -80,11 +55,11 @@ call s:setGroup("NormalTransparent", s:lightyellow, s:none, s:none)
 " ColorColumn   used for the columns set with 'colorcolumn'
 call s:setGroup("ColorColumn", s:none, s:darkscroll, s:none)
 " Conceal       placeholder characters substituted for concealed text (see 'conceallevel')
-call s:linkGroup("Conceal", "Folded")
+" call s:linkGroup("Conceal", "Folded")
 " Cursor        the character under the cursor (default: bg and fg reversed)
-call s:setGroup("Cursor", s:darkmagenta, s:none, s:reverse)
+" call s:setGroup("Cursor", s:darkmagenta, s:none, s:reverse)
 " CursorIM      like Cursor, but used when in IME mode |CursorIM|
-call s:linkGroup("CursorIM", "Cursor")
+" call s:linkGroup("CursorIM", "Cursor")
 " CursorColumn  the screen column that the cursor is in when 'cursorcolumn' is set
 call s:linkGroup("CursorColumn", "ColorColumn")
 " CursorLine    the screen line that the cursor is in when 'cursorline' is set
@@ -104,30 +79,36 @@ call s:linkGroup("EndOfBuffer", "NonText")
 " VertSplit     the column separating vertically split windows
 call s:linkGroup("VertSplit", "ModeMsg")
 " Folded        line used for closed folds
-call s:setGroup("Folded", s:darkblack, s:darkcyan, s:none)
+" call s:setGroup("Folded", s:darkblack, s:darkcyan, s:none)
 " FoldColumn    'foldcolumn'
-call s:linkGroup("FoldColumn", "Folded")
+" call s:linkGroup("FoldColumn", "Folded")
 " SignColumn    column where |signs| are displayed
 call s:linkGroup("SignColumn", "LineNr")
 " IncSearch     'incsearch' highlighting; also used for the text replaced with ":s///c"
 " LineNr        Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 call s:setGroup("LineNr", s:darkcyan, s:none, s:none)
 " CursorLineNr  Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-call s:linkGroup("CursorLineNr", "LineNr")
+call s:setGroup("CursorLineNr", s:lightwhite, s:none, s:none)
 " MatchParen    The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 call s:setGroup("MatchParen", s:none, s:darkcyan, s:none)
 " ModeMsg       'showmode' message (e.g., "-- INSERT --")
-call s:setGroup("ModeMsg", s:lightwhite, s:none, s:none)
+call s:setGroup("ModeMsg", s:darkblack, s:lightcyan, s:bold)
+" MsgArea
+call s:setGroup("MsgArea", s:darkblack, s:darkwhite, s:none)
 " MoreMsg       |more-prompt|
-call s:linkGroup("MoreMsg", "ModeMsg")
+" call s:linkGroup("MoreMsg", "ModeMsg")
 " NonText       '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
 call s:setGroup("NonText", s:darkcyan, s:none, s:none)
 " Normal        normal text; any text that matches no syntax pattern
 call s:setGroup("Normal", s:lightyellow, s:darkblue, s:none)
-" Pmenu         Popup menu: normal item.
+" NormalFloat
+call s:setGroup("NormalFloat", s:darkblack, s:darkwhite, s:none)
+call s:setGroup("FloatBorder", s:lightwhite, s:darkwhite, s:none)
+call s:setGroup("FloatTitle", s:darkblack, s:darkwhite, s:bold)
 call s:setGroup("Pmenu", s:darkblack, s:darkwhite, s:none)
-" PmenuSel      Popup menu: selected item.
-call s:setGroup("PmenuSel", s:darkgreen, s:darkwhite, s:none)
+call s:setGroup("PmenuSel", s:darkblack, s:darkgreen, s:none)
+call s:setGroup("PmenuKind", s:darkblack, s:darkwhite, s:none)
+call s:setGroup("PmenuKindSel", s:darkblack, s:darkgreen, s:none)
 " PmenuSbar     Popup menu: scrollbar.
 call s:setGroup("PmenuSbar", s:darkscroll, s:lightscroll, s:none)
 " PmenuThumb    Popup menu: Thumb of the scrollbar.
@@ -136,6 +117,7 @@ call s:setGroup("PmenuThumb", s:lightscroll, s:darkscroll, s:none)
 call s:linkGroup("Question", "ModeMsg")
 " QuickFixLine  Current |quickfix| item in the quickfix window.
 " Search        Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+call s:setGroup("Search", s:darkblack, s:darkgreen, s:bold)
 " SpecialKey    Meta and special keys listed with ":map", also for text used to show unprintable characters in the text, 'listchars'.  Generally: text that is displayed differently from what it really is.
 call s:setGroup("SpecialKey", s:lightcyan, s:none, s:none)
 " SpellBad      Word that is not recognized by the spellchecker. |spell| This will be combined with the highlighting used otherwise.
@@ -143,9 +125,9 @@ call s:setGroup("SpecialKey", s:lightcyan, s:none, s:none)
 " SpellLocal    Word that is recognized by the spellchecker as one that is used in another region. |spell| This will be combined with the highlighting used otherwise.
 " SpellRare     Word that is recognized by the spellchecker as one that is hardly ever used. |spell| This will be combined with the highlighting used otherwise.
 " StatusLine    status line of current window
-call s:setGroup("StatusLine", s:darkblack, s:darkwhite, s:none)
+call s:setGroup("StatusLine", s:darkblack, s:darkgreen, s:none)
 " StatusLineNC  status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-call s:setGroup("StatusLineNC", s:darkblack, s:darkmagenta, s:none)
+call s:setGroup("StatusLineNC", s:darkblack, s:darkwhite, s:none)
 " TabLine       tab pages line, not active tab page label
 call s:linkGroup("TabLine", "StatusLineNC")
 " TabLineFill   tab pages line, where there are no labels
@@ -156,7 +138,7 @@ call s:linkGroup("TabLineSel", "StatusLine")
 call s:setGroup("Title", s:darkcyan, s:none, s:none)
 " call s:linkGroup("Title", "NormalTransparent")
 " Visual        Visual mode selection
-call s:setGroup("Visual", s:darkblue, s:darkwhite, s:none)
+call s:setGroup("Visual", s:darkblue, s:lightcyan, s:bold)
 " VisualNOS     Visual mode selection when vim is "Not Owning the Selection".  Only X11 Gui's |gui-x11| and |xterm-clipboard| supports this.
 call s:setGroup("VisualNOS", s:darkblue, s:lightblack, s:none)
 " WarningMsg    warning messages
