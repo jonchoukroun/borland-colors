@@ -164,7 +164,7 @@ call s:linkGroup("Delimiter", "NonText")
 call s:linkGroup("SpecialComment", "NonText")
 call s:linkGroup("Debug", "NonText")
 
-call s:setGrup("Underlined", s:lightyellow, s:none, s:bold)
+call s:setGroup("Underlined", s:lightyellow, s:none, s:bold)
 
 call s:linkGroup("Error", "Alert")
 
