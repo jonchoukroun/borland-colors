@@ -46,7 +46,6 @@ function! s:linkGroup(name, parent)
 endf
 
 " Helper highlight groups
-
 " Normal text; any text that matches no syntax pattern
 call s:setGroup("Normal", s:lightyellow, s:darkblue, s:none)
 call s:setGroup("NormalReverse", s:darkblue, s:lightyellow, s:none)
@@ -63,12 +62,13 @@ call s:setGroup("Disabled", s:darkwhite, s:none, s:none)
 call s:setGroup("NonText", s:darkcyan, s:none, s:none)
 call s:setGroup("Alert", s:lightred, s:none, s:bold)
 call s:setGroup("WindowBase", s:darkblack, s:darkwhite, s:none)
+call s:setGroup("WindowBold", s:darkblack, s:darkwhite, s:bold)
 
 " Vim default highlight groups
 call s:linkGroup("ColorColumn", "Scroll")
 call s:linkGroup("Conceal", "Disabled")
 call s:linkGroup("CurSearch", "NormalReverse")
-call s:linkGroup("Cursor", "Callout")
+call s:linkGroup("Cursor", "WindowBold")
 call s:linkGroup("lCursor", "Callout")
 call s:linkGroup("CursorIM", "Callout")
 call s:linkGroup("CursorColumn", "Scroll")
@@ -97,7 +97,7 @@ call s:setGroup("MsgArea", s:lightcyan, s:none, s:none)
 call s:linkGroup("MoreMsg", "Alert")
 call s:linkGroup("NormalFloat", "WindowBase")
 call s:setGroup("FloatBorder", s:lightwhite, s:darkwhite, s:none)
-call s:setGroup("FloatTitle", s:darkblack, s:darkwhite, s:bold)
+call s:linkGroup("FloatTitle", "WindowBold")
 call s:setGroup("NormalNC", s:darkwhite, s:darkblue, s:none)
 call s:linkGroup("Pmenu", "WindowBase")
 call s:linkGroup("PmenuSel", "HighlightLine")
