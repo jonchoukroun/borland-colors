@@ -127,7 +127,7 @@ call s:linkGroup("VisualNOS", "HighlightLine")
 call s:linkGroup("WarningMsg", "Alert")
 call s:setGroup("Whitespace", s:none, s:none, s:none)
 " Wildmenu
-call s:linkGroup("WinBarNC", "WindowBase")
+call s:setGroup("WinBarNC", s:darkwhite, s:darkscroll, s:none)
 
 call s:linkGroup("Comment", "Disabled")
 
@@ -213,9 +213,9 @@ call s:linkGroup("CmpItemKindColor", "WindowBase")
 call s:linkGroup("CmpItemKindTypeParameter", "WindowBase")
 
 " nvim-notify highlights
-call s:setGroup("NotifyBorder", s:darkblue, s:darkcyan, s:none)
-call s:setGroup("NotifyTitle", s:darkblue, s:none, s:bold)
-call s:setGroup("NotifyBody", s:darkblue, s:darkcyan, s:none)
+call s:setGroup("NotifyBorder", s:darkscroll, s:darkcyan, s:none)
+call s:setGroup("NotifyTitle", s:darkscroll, s:none, s:bold)
+call s:setGroup("NotifyBody", s:darkscroll, s:darkcyan, s:none)
 call s:linkGroup("NotifyERRORBorder", "NotifyBorder")
 call s:linkGroup("NotifyWARNBorder", "NotifyBorder")
 call s:linkGroup("NotifyINFOBorder", "NotifyBorder")
@@ -236,3 +236,7 @@ call s:linkGroup("NotifyWARNBody", "NotifyBody")
 call s:linkGroup("NotifyINFOBody", "NotifyBody")
 call s:linkGroup("NotifyDEBUGBody" , "NotifyBody")
 call s:linkGroup("NotifyTRACEBody" , "NotifyBody")
+
+" noice highlights
+call s:linkGroup("NoiceCmdlinePopup", "WindowBase")
+call s:setGroup("NoiceCmdlinePopupBorder", s:lightwhite, s:darkwhite, s:none)
