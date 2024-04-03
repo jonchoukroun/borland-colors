@@ -240,3 +240,11 @@ call s:linkGroup("NotifyTRACEBody" , "NotifyBody")
 " noice highlights
 call s:linkGroup("NoiceCmdlinePopup", "WindowBase")
 call s:setGroup("NoiceCmdlinePopupBorder", s:lightwhite, s:darkwhite, s:none)
+
+" treesitter-context highlights
+call s:linkGroup("TreesitterContext", "ScrollReverse")
+call s:linkGroup("TreesitterContextSeparator", "ScrollReverse")
+call s:setGroup("TreesitterContextBottom", s:none, s:lightscroll, s:underline)
+
+" lazy highlights
+call s:linkGroup("LazyButton", "HighlightLine")
